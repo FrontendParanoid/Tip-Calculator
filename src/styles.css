@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}

@@ -1,0 +1,106 @@
+<main>
+  <div class="title">SPLI<br />TTER</div>
+  <div class="container" (input)="calculation()">
+    <div class="billTab">
+      <form [formGroup]="form">
+        <div class="input-group">
+          <div class="label-group">
+            <label>Bill</label>
+            <span class="error" *ngIf="billField?.hasError('pattern')"
+              >Enter a valid number</span
+            >
+          </div>
+          <input
+            type="number"
+            name="bill"
+            [(ngModel)]="bill"
+            (change)="calculation()"
+            placeholder="0"
+            formControlName="billField"
+          />
+        </div>
+        <div class="input-group">
+          <label>Select Tip%</label>
+          <div class="btnGroup">
+            <div
+              *ngFor="let percentage of percentages; let i = index"
+              class="percentage"
+            >
+              <input
+                type="checkbox"
+                id="check{{ percentages.indexOf(percentage) }}"
+                [value]="percentage"
+                #checkbox
+                (click)="Choose(i)"
+              />
+              <label for="check{{ percentages.indexOf(percentage) }}">{{
+                percentage
+              }}</label>
+            </div>
+            <div id="CustomButtonElement">
+              <button
+                (click)="Choose(5)"
+                appCustomBtn
+                class="customBtn"
+                (CustomInputChange)="OnCustomInput($event)"
+                type="button"
+              >
+                Custom
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="label-group">
+            <label>Number of People</label>
+            <span class="error" *ngIf="numberPeopleField?.hasError('pattern')"
+              >Enter a valid number</span
+            >
+          </div>
+          <input
+            type="number"
+            name="nbPeople"
+            [(ngModel)]="nbPeople"
+            (change)="calculation()"
+            class="nbPeople"
+            placeholder="1"
+            formControlName="numberPeopleField"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="calculationsTab">
+      <div class="calculations">
+        <div class="tipAmount">
+          <div>
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="tipAmountRes">
+            <h1>$</h1>
+            <h1 #tipAmountResVal>0.00</h1>
+          </div>
+        </div>
+        <div class="total">
+          <div>
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="totalRes">
+            <h1>$</h1>
+            <h1 #totalResVal>0.00</h1>
+          </div>
+        </div>
+      </div>
+      <div class="resetBtnDiv">
+        <button class="resetBtn" (click)="ResetForm()">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Aziz Hmidi</a>.
+  </div>
+</main>

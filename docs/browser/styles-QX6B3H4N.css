@@ -1,0 +1,14 @@
+/* src/styles.css */
+@font-face {
+  font-family: "Space Mono";
+  src: url(/fonts/Space_Mono/SpaceMono-Regular.ttf);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles-QX6B3H4N.css.map */

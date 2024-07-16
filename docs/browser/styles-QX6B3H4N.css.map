@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["@font-face {\r\n  font-family: \"Space Mono\";\r\n  src: url(\"/fonts/Space_Mono/SpaceMono-Regular.ttf\");\r\n}\r\n\r\n* {\r\n  margin: 0px;\r\n  padding: 0px;\r\n  box-sizing: border-box;\r\n  font-family: \"Space Mono\";\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,eAAa;AACb,OAAK;AACP;AAEA;AACE,UAAQ;AACR,WAAS;AACT,cAAY;AACZ,eAAa;AACf;",
+  "names": []
+}

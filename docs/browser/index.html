@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+<link rel="stylesheet" href="styles-QX6B3H4N.css"><style ng-app-id="ng">
+
+main[_ngcontent-ng-c1861520074] {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(185, 41%, 84%);
+  height: 100vh;
+}
+.title[_ngcontent-ng-c1861520074] {
+  font-size: 28px;
+  color: hsl(186, 14%, 43%);
+}
+.container[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+.calculationsTab[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 40px 20px 20px 20px;
+  height: 100%;
+  width: 40%;
+}
+.billTab[_ngcontent-ng-c1861520074] {
+  height: 100%;
+  width: 50%;
+}
+.billTab[_ngcontent-ng-c1861520074]   form[_ngcontent-ng-c1861520074] {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: column;
+}
+.billTab[_ngcontent-ng-c1861520074]   label[_ngcontent-ng-c1861520074], 
+.billTab[_ngcontent-ng-c1861520074]   input[_ngcontent-ng-c1861520074] {
+  display: block;
+}
+.input-group[_ngcontent-ng-c1861520074]   input[_ngcontent-ng-c1861520074] {
+  background-color: hsl(185, 41%, 84%);
+  padding: 5px 25px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  text-align: right;
+  background-image: url(/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: center;
+  border: 2px solid transparent;
+}
+.input-group[_ngcontent-ng-c1861520074]   input[_ngcontent-ng-c1861520074]:hover {
+  outline: none;
+  border: 2px solid hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+.label-group[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error[_ngcontent-ng-c1861520074] {
+  font-size: 12px;
+  font-weight: 700;
+  color: red;
+}
+.error-border[_ngcontent-ng-c1861520074] {
+  background-color: red;
+}
+.nbPeople[_ngcontent-ng-c1861520074] {
+  background-image: url(/images/icon-person.svg) !important;
+}
+.tipAmountRes[_ngcontent-ng-c1861520074], 
+.totalRes[_ngcontent-ng-c1861520074] {
+  display: flex;
+}
+.tipAmountRes[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074], 
+.totalRes[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074] {
+  font-size: 16px;
+}
+.tipAmount[_ngcontent-ng-c1861520074]   span[_ngcontent-ng-c1861520074], 
+.total[_ngcontent-ng-c1861520074]   span[_ngcontent-ng-c1861520074] {
+  font-size: 11px;
+}
+.tipAmount[_ngcontent-ng-c1861520074] {
+  margin-bottom: 10px;
+}
+input[_ngcontent-ng-c1861520074]::-webkit-outer-spin-button, 
+input[_ngcontent-ng-c1861520074]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number][_ngcontent-ng-c1861520074] {
+  appearance: textfield;
+}
+.btnGroup[_ngcontent-ng-c1861520074] {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.percentage[_ngcontent-ng-c1861520074] {
+  position: relative;
+  display: flex;
+}
+.percentage[_ngcontent-ng-c1861520074]   input[_ngcontent-ng-c1861520074] {
+  display: none;
+}
+.percentage[_ngcontent-ng-c1861520074]   input[_ngcontent-ng-c1861520074]:checked    + label[_ngcontent-ng-c1861520074] {
+  background-color: hsl(172, 67%, 45%);
+  color: black;
+}
+.percentage[_ngcontent-ng-c1861520074]   label[_ngcontent-ng-c1861520074] {
+  text-align: center;
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px 15px;
+  border: none;
+}
+.percentage[_ngcontent-ng-c1861520074]   label[_ngcontent-ng-c1861520074]:hover {
+  background-color: hsl(185, 53%, 67%);
+  cursor: pointer;
+}
+.customBtn[_ngcontent-ng-c1861520074] {
+  border: 2px solid transparent;
+  background-color: hsl(189, 41%, 97%);
+  color: black !important;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+.ClickClass[_ngcontent-ng-c1861520074] {
+  width: 6rem !important;
+  border-radius: 3px !important;
+  padding: 5px 15px !important;
+  border: 1px solid hsl(172, 67%, 45%) !important;
+  background-color: hsl(189, 41%, 97%) !important;
+  background-image: none !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ClickClass[_ngcontent-ng-c1861520074]:focus {
+  border: 1px solid hsl(172, 67%, 45%) !important;
+  outline: none;
+}
+.customBtn[_ngcontent-ng-c1861520074]:hover {
+  border: 2px solid hsl(172, 67%, 45%) !important;
+}
+.calculations[_ngcontent-ng-c1861520074] {
+  width: 100%;
+}
+.calculationsTab[_ngcontent-ng-c1861520074]   p[_ngcontent-ng-c1861520074] {
+  color: white;
+}
+.calculationsTab[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074] {
+  font-size: 24px;
+}
+.calculationsTab[_ngcontent-ng-c1861520074]   span[_ngcontent-ng-c1861520074] {
+  color: hsl(184, 14%, 56%);
+}
+.tipAmount[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.tipAmount[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074] {
+  color: hsl(172, 67%, 45%);
+}
+.total[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.total[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074] {
+  color: hsl(172, 67%, 45%);
+}
+.resetBtnDiv[_ngcontent-ng-c1861520074] {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.resetBtn[_ngcontent-ng-c1861520074] {
+  color: black;
+  font-weight: 500;
+  background-color: hsl(172, 67%, 45%);
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+.resetBtn[_ngcontent-ng-c1861520074]:hover {
+  background-color: hsl(185, 41%, 84%);
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .container[_ngcontent-ng-c1861520074] {
+    width: 100%;
+  }
+}
+.calculations[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074], 
+.total[_ngcontent-ng-c1861520074]   h1[_ngcontent-ng-c1861520074] {
+  font-weight: 2000;
+  font-size: 26px;
+}
+@media (max-width: 475px) {
+  .main[_ngcontent-ng-c1861520074] {
+    height: 100vh;
+  }
+  .title[_ngcontent-ng-c1861520074] {
+    height: 15vh;
+  }
+  .container[_ngcontent-ng-c1861520074] {
+    width: 100%;
+    height: 85vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px 0px 10px;
+    border-start-start-radius: 25px;
+    border-start-start-radius: 25px;
+  }
+  .billTab[_ngcontent-ng-c1861520074]   form[_ngcontent-ng-c1861520074] {
+    width: 100%;
+    display: block;
+  }
+  .input-group[_ngcontent-ng-c1861520074] {
+    margin-bottom: 20px;
+  }
+  .billTab[_ngcontent-ng-c1861520074] {
+    width: 90%;
+    height: 40vh;
+  }
+  .calculationsTab[_ngcontent-ng-c1861520074] {
+    width: 90%;
+    height: 30vh;
+  }
+  .btnGroup[_ngcontent-ng-c1861520074] {
+    grid-template-columns: 1fr 1fr;
+  }
+  .attribution[_ngcontent-ng-c1861520074] {
+    display: none;
+  }
+  .ClickClass[_ngcontent-ng-c1861520074] {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+/*# sourceMappingURL=app.component-TJXVOVZQ.css.map */</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c1861520074="" ng-version="18.0.4" ngh="0" ng-server-context="ssg"><main _ngcontent-ng-c1861520074=""><div _ngcontent-ng-c1861520074="" class="title">SPLI<br _ngcontent-ng-c1861520074="">TTER</div><div _ngcontent-ng-c1861520074="" class="container"><div _ngcontent-ng-c1861520074="" class="billTab"><form _ngcontent-ng-c1861520074="" novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-valid"><div _ngcontent-ng-c1861520074="" class="input-group"><div _ngcontent-ng-c1861520074="" class="label-group"><label _ngcontent-ng-c1861520074="">Bill</label><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><input _ngcontent-ng-c1861520074="" type="number" name="bill" placeholder="0" formcontrolname="billField" ng-reflect-name="billField" ng-reflect-model="0" value="0" class="ng-untouched ng-pristine ng-valid"></div><div _ngcontent-ng-c1861520074="" class="input-group"><label _ngcontent-ng-c1861520074="">Select Tip%</label><div _ngcontent-ng-c1861520074="" class="btnGroup"><div _ngcontent-ng-c1861520074="" class="percentage"><input _ngcontent-ng-c1861520074="" type="checkbox" id="check0" value="5%"><label _ngcontent-ng-c1861520074="" for="check0">5%</label></div><div _ngcontent-ng-c1861520074="" class="percentage"><input _ngcontent-ng-c1861520074="" type="checkbox" id="check1" value="10%"><label _ngcontent-ng-c1861520074="" for="check1">10%</label></div><div _ngcontent-ng-c1861520074="" class="percentage"><input _ngcontent-ng-c1861520074="" type="checkbox" id="check2" value="15%"><label _ngcontent-ng-c1861520074="" for="check2">15%</label></div><div _ngcontent-ng-c1861520074="" class="percentage"><input _ngcontent-ng-c1861520074="" type="checkbox" id="check3" value="25%"><label _ngcontent-ng-c1861520074="" for="check3">25%</label></div><div _ngcontent-ng-c1861520074="" class="percentage"><input _ngcontent-ng-c1861520074="" type="checkbox" id="check4" value="50%"><label _ngcontent-ng-c1861520074="" for="check4">50%</label></div><!--bindings={
+  "ng-reflect-ng-for-of": "5%,10%,15%,25%,50%"
+}--><div _ngcontent-ng-c1861520074="" id="CustomButtonElement"><button _ngcontent-ng-c1861520074="" appcustombtn="" type="button" class="customBtn"> Custom </button></div></div></div><div _ngcontent-ng-c1861520074="" class="input-group"><div _ngcontent-ng-c1861520074="" class="label-group"><label _ngcontent-ng-c1861520074="">Number of People</label><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><input _ngcontent-ng-c1861520074="" type="number" name="nbPeople" placeholder="1" formcontrolname="numberPeopleField" class="nbPeople ng-untouched ng-pristine ng-valid" ng-reflect-name="numberPeopleField" ng-reflect-model="1" value="1"></div></form></div><div _ngcontent-ng-c1861520074="" class="calculationsTab"><div _ngcontent-ng-c1861520074="" class="calculations"><div _ngcontent-ng-c1861520074="" class="tipAmount"><div _ngcontent-ng-c1861520074=""><p _ngcontent-ng-c1861520074="">Tip Amount</p><span _ngcontent-ng-c1861520074="">/ person</span></div><div _ngcontent-ng-c1861520074="" class="tipAmountRes"><h1 _ngcontent-ng-c1861520074="">$</h1><h1 _ngcontent-ng-c1861520074="">0.00</h1></div></div><div _ngcontent-ng-c1861520074="" class="total"><div _ngcontent-ng-c1861520074=""><p _ngcontent-ng-c1861520074="">Total</p><span _ngcontent-ng-c1861520074="">/ person</span></div><div _ngcontent-ng-c1861520074="" class="totalRes"><h1 _ngcontent-ng-c1861520074="">$</h1><h1 _ngcontent-ng-c1861520074="">0.00</h1></div></div></div><div _ngcontent-ng-c1861520074="" class="resetBtnDiv"><button _ngcontent-ng-c1861520074="" class="resetBtn">Reset</button></div></div></div><div _ngcontent-ng-c1861520074="" class="attribution"> Challenge by <a _ngcontent-ng-c1861520074="" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a _ngcontent-ng-c1861520074="" href="#">Aziz Hmidi</a>. </div></main></app-root>
+<script src="polyfills-T5UBWB5Z.js" type="module"></script><script src="main-GJGME7C3.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"12":"t0","18":"t1","26":"t2"},"c":{"12":[],"18":[{"i":"t1","r":1,"x":5}],"26":[]}}]}</script></body></html>

@@ -1,7 +1,7 @@
 /* src/styles.css */
 @font-face {
   font-family: "Space Mono";
-  src: url(/fonts/Space_Mono/SpaceMono-Regular.ttf);
+  src: url(./fonts/Space_Mono/SpaceMono-Regular.ttf);
 }
 * {
   margin: 0px;
